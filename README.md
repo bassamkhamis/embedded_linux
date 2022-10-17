@@ -16,16 +16,13 @@ and easy to configure using menuconfig or xconfig**
 **First download** [Buildroot](https://buildroot.org/)
 Then Extract it and inside it Run 
 
-'
 
-make menuconfig
-
-'
+'make menuconfig'
 
 **may need to install some utilities like bison and flex**
 
-'''
 
+'''
 sudo apt-get update
 sudo apt-get install flex
 sudo apt-get install bison
@@ -34,3 +31,12 @@ sudo apt-get install bison
 **window like this will be appeared** 
 
 ![](https://github.com/bassamkhamis/embedded_linux/blob/main/Buildroot.png)
+
+1. Target options select
+   1. Target Architecture > RISCV
+   2. Target Architecture Size > 64-bit
+2. Toolchain
+   1. Kernel Headers > Linux 5.17.x kernel headers
+   2. GCC compiler Version > gcc 11.x
+
+
