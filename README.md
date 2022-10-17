@@ -19,7 +19,9 @@ Then Extract it and inside it Run
 '
 
 make menuconfig
-' 
+
+'
+
 **may need to install some utilities like bison and flex**
 
 '''
@@ -28,6 +30,7 @@ sudo apt-get update
 sudo apt-get install flex
 sudo apt-get install bison
 '''
+
 **window like this will be appeared** 
 
 ![](https://github.com/bassamkhamis/embedded_linux/blob/main/Buildroot.png)
