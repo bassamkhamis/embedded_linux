@@ -39,4 +39,6 @@ sudo apt-get install bison
    1. Kernel Headers > Linux 5.17.x kernel headers
    2. GCC compiler Version > gcc 11.x
 
+**Finaly Run "make -j6" it will take long time**
+
 
