@@ -13,8 +13,8 @@
 **is open source and Can build a toolchain, a rootfs, a kernel, a bootloader in small time
 and easy to configure using menuconfig or xconfig**
 
-**First download ** [Buildroot](https://buildroot.org/)
-Then Extract it and inside it Run 'make menuconfig' 
+**First download** [Buildroot](https://buildroot.org/)
+Then Extract it and inside it Run '''make menuconfig''' 
 **may need to install some utilities like bison and flex**
 '''sudo apt-get update
 sudo apt-get install flex
