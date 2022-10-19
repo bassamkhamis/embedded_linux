@@ -119,7 +119,7 @@ $ make defconfig
    
 ## Build and compile root file system using busyBox
 **BusyBox is a software suite that provides several Unix utilities in a single executable**
-**Download 1.33 version** `https://busybox.net` **then unzip it and run** ` make allnoconfig` **to reset, the configure is easy run** `make menuconfig` ** and select utilities that you want it to be in filesystem like**
+**Download 1.33 version** `https://busybox.net` **then unzip it and run** ` make allnoconfig` **to reset, the configure is easy run** `make menuconfig` **and select utilities that you want it to be in filesystem like**
    
 1. In Settings →Build Options, enable Build static binary (no shared libs)
 2. In Settings →Build Options, set Cross compiler prefix to riscv64-linux-
