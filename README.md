@@ -9,7 +9,7 @@
 - [Compile kernel](#compile-kernel) 
 - [Run linux on qemu](#Run-linux-on-qemu) 
 - [References](#References) 
-
+***
 ## Build compiler toolchain using Buildroot
 **is open source and Can build a toolchain, a rootfs, a kernel, a bootloader in small time
 and easy to configure using menuconfig or xconfig**
@@ -84,7 +84,7 @@ ls configs/ | grep riscv
            1. CROSS_COMBILE=riscv64-linux- is store the prefix of your toolchain like riscv-linux-gcc
            2. -j6 build faster x6, run 5 jobs
    
-
+***
 ## Compile openSBI firmware
 **Required to start an OS/u-boot from the Firmware(M mode) to Supervisor(S mode) and it work for RISCV Machine, OpenSBI has menuconfig like u-bbot and buildroot you can configuare and combile it**
    
