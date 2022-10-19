@@ -44,7 +44,23 @@ sudo apt-get install bison
 NOTE: Don't forget add toolchain in path by** `export PATH=~/path of file/:$PATH`
 
 ## Combile bootloader using U-boot
-**TODO**
+ **Dwonload u-boot** 
+ 
+ ```
+ git clone https://source.denx.de/u-boot/u-boot.git
+ cd u-boot
+git checkout v2022.07
+```
+**U-Boot has many configruation files according to specific hardware you can find this file in configs directory we can use grep command line to find it**
+
+```
+ls configs/ | grep riscv
+```
+
+**selesct this ** `qemu-riscv64_smode_defconfig` **open add the follows
+
+```
+```
 
 
 ## Compile openSBI firmware
