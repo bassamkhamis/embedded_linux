@@ -142,7 +142,7 @@ $ make defconfig
    
    
 ## Configure virtual SD card on linux Ubuntu 
-**Create SD virsual** `dd if=/dev/zero of=disk.img bs=1M count=128` * size =128 M, all bytes are filled by zeros
+**Create SD virsual** `dd if=/dev/zero of=disk.img bs=1M count=128` **size =128 M, all bytes are filled by zeros
 run this `cfdisk disk.img`  then selsect Dos and create two partins as follows:**
    
    1. A first 64 MB primary partition (type W95 FAT32 (LBA)), marked as bootable
@@ -164,7 +164,7 @@ run this `cfdisk disk.img`  then selsect Dos and create two partins as follows:*
    sudo mkfs.ext4 -L rootfs /dev/loop13p2
 
    ```
-   ** Create mount point and copy kernel and file system**
+   **Create mount point and copy kernel and file system**
    
    ```
    mkdir /mnt/boot
