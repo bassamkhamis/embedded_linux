@@ -47,21 +47,21 @@ NOTE: Don't forget add toolchain in path by** `export PATH=~/path of file/:$PATH
 **TODO**
 
 
-# Compile openSBI firmware
+## Compile openSBI firmware
 **TODO**
 
 
-# Configare virtual SD card on linux Ubuntu 
+## Configare virtual SD card on linux Ubuntu 
 **TODO**
 
 
-# Compile kernel 
+## Compile kernel 
 
 **TODO**
 
-# Build and compile root file system using busyBox
+## Build and compile root file system using busyBox
 **TODO**
 
 
-# Run linux on qemu
+## Run linux on qemu
 **TODO**
