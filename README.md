@@ -66,8 +66,8 @@ ls configs/ | grep riscv
  CONFIG_ENV_FAT_DEVICE_AND_PART="0:1"
 ```
 
-**This lines means fist one save varibles envirument in FAT, second one <virtio> name of SD card, <0:1> first device partition one**
-**for adtinal configruation we can open menual and add some customer configruation by run this** `make menuconfig` **in folder of u-boot
+**This lines means first one save variables envirument in FAT, second one <virtio> name of SD card, <0:1> first device partition one**
+**for additional configruation we can open menu and add some customer configruation by run this** `make menuconfig` **in folder of u-boot
    this will appear 
    ![](https://github.com/bassamkhamis/embedded_linux/blob/main/u-boot.png)
    
@@ -78,9 +78,9 @@ ls configs/ | grep riscv
    make qemu-riscv64_smode_defconfig
    make -j6
    ```
-   **NOTE:
+   **NOTE:**
            1. CROSS_COMBILE=riscv64-linux- is store the prefix of your toolchain like riscv-linux-gcc
-           2. -j6 build faster x6, run 5 jobs**
+           2. -j6 build faster x6, run 5 jobs
    
 
 ## Compile openSBI firmware
