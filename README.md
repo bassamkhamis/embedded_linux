@@ -58,7 +58,7 @@ git checkout v2022.07
 ls configs/ | grep riscv
 ```
 
-**we will use this ** `qemu-riscv64_smode_defconfig` **open add the follows**
+**we will use this** `qemu-riscv64_smode_defconfig` **open add the follows**
 
 ```
  CONFIG_ENV_IS_IN_FAT=y
@@ -68,7 +68,7 @@ ls configs/ | grep riscv
 
 **This lines means first one save variables envirument in FAT, second one <virtio> name of SD card, <0:1> first device partition one**
 **for additional configruation we can open menu and add some customer configruation by run this** `make menuconfig` **in folder of u-boot
-   this will appear 
+   this will appear** 
    ![](https://github.com/bassamkhamis/embedded_linux/blob/main/u-boot.png)
    
    finaly, run this
