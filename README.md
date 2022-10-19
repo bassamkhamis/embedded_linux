@@ -2,12 +2,12 @@
 **Hello All, In this Repo I will demonstrate how can build embedded linux from scratch**
 ## content 
 - [Build compiler toolchain using Buildroot](#build-compiler-toolchain-using-Buildroot)
-- [Combile bootloader using U-boot](#combile bootloader using U-boot)
-- [Compile openSBI firmware](#compile openSBI firmware)
-- [Configare virtual SD card on linux Ubuntu](#configare virtual SD card on linux Ubuntu)
-- [Compile kernel](#compile kernel) 
-- [Build and compile root file system using busyBox](#build and compile root file system using busyBox)
-- [Run linux on qemu](#Run linux on qemu) 
+- [Combile bootloader using U-boot](#combile-bootloader-using-U-boot)
+- [Compile openSBI firmware](#compile-openSBI-firmware)
+- [Configare virtual SD card on linux Ubuntu](#configare-virtual-SD card-on-linux Ubuntu)
+- [Compile kernel](#compile-kernel) 
+- [Build and compile root file system using busyBox](#build-and-compile-root-file-system-using busyBox)
+- [Run linux on qemu](#Run-linux-on-qemu) 
 
 ## Build compiler toolchain using Buildroot
 **is open source and Can build a toolchain, a rootfs, a kernel, a bootloader in small time
