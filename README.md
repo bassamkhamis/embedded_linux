@@ -57,10 +57,31 @@ git checkout v2022.07
 ls configs/ | grep riscv
 ```
 
-**selesct this ** `qemu-riscv64_smode_defconfig` **open add the follows
+**we will use this ** `qemu-riscv64_smode_defconfig` **open add the follows**
 
 ```
+ CONFIG_ENV_IS_IN_FAT=y
+ CONFIG_ENV_FAT_INTERFACE="virtio"
+ CONFIG_ENV_FAT_DEVICE_AND_PART="0:1"
 ```
+
+**This lines means fist one save varibles envirument in FAT, second one <virtio> name of SD card, <0:1> first device partin one**
+**for adtinal configruation we can open menual and add some customer configruation by run this** `make menuconfig` **in folder of u-boot
+   this will appear 
+   ![]()
+   
+   finaly, run this
+   
+   ```
+   export CROSS_COMBILE=riscv64-linux-
+   make qemu-riscv64_smode_defconfig
+   make -j6
+   ```
+   **NOTE:
+           1. CROSS_COMBILE=riscv64-linux- is store the prefix of your toolchain like riscv-linux-gcc
+           2. -j6 build faster x6, run 5 jobs
+   **
+   
 
 
 ## Compile openSBI firmware
