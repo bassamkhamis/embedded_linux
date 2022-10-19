@@ -17,7 +17,11 @@ and easy to configure using menuconfig or xconfig**
 Then Extract it and inside it Run 
 
 ''''
-'''make menuconfig'''
+'''
+
+make menuconfig
+
+'''
  ''''
  
  'int x =9;'
