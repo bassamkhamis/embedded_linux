@@ -156,7 +156,9 @@ run this `cfdisk disk.img`  then selsect Dos and create two partins as follows:*
     /dev/loop13
 
    ```
-   **In my case loop13, may be different in your case, We can now format the partitions:**
+   
+   **In my case loop13, may be different in your case, We can now format the partitions**
+   
    ```
    sudo mkfs.vfat -F 32 -n boot /dev/loop13p1
    sudo mkfs.ext4 -L rootfs /dev/loop13p2
@@ -182,7 +184,8 @@ run this `cfdisk disk.img`  then selsect Dos and create two partins as follows:*
 
 
 ## Run linux on qemu
-**Using qemu-riscv64 **
+**Using qemu-riscv64**
+   
    ```
   sudo qemu-system-riscv64 -m 2G -nographic -machine virt -smp 8 \
 -bios opensbi/build/platform/generic/firmware/fw_payload.elf \
@@ -196,7 +199,7 @@ run this `cfdisk disk.img`  then selsect Dos and create two partins as follows:*
 mount -t proc nodev /proc
 mount -t sysfs nodev /sys
    ```
-[viedo](https://drive.google.com/drive/folders/1BspgTYwvK53VdBDBNc1VzwBbZp8ZT3_X?usp=sharing)
+[demo viedo](https://drive.google.com/drive/folders/1BspgTYwvK53VdBDBNc1VzwBbZp8ZT3_X?usp=sharing)
    
 ## References
    1. [ENG.Keroles Shenouda slides](https://l.facebook.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Fdrive%2Fmobile%2Ffolders%2F1rHnM5Q70x2f1bcMJORJjZJ_GvnDiNfo_%3Ffbclid%3DIwAR0wRfBsWWplRAI7yFiA8voYWkk0Y4GIXAQHpSWnl4hIFJer6bC4RXH4_WU&h=AT2d2Fc_XP7UkP5lTFiDTFRGz21onsxE5ZhHOBGVkYraZciENKc0AbZmKb7KCZaL0kAHHESP5_ga-hQbIYcg4u8BxQs_DH6mQ5zQPaJ7tUtgg2lauyIl-SOvJqCJfKzs4icKMQ)
