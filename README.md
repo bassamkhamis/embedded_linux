@@ -199,6 +199,6 @@ mount -t sysfs nodev /sys
 [viedo](https://drive.google.com/drive/folders/1BspgTYwvK53VdBDBNc1VzwBbZp8ZT3_X?usp=sharing)
    
 ## References
-   1. [ENG.Keroles Shenoudaslides](https://l.facebook.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Fdrive%2Fmobile%2Ffolders%2F1rHnM5Q70x2f1bcMJORJjZJ_GvnDiNfo_%3Ffbclid%3DIwAR0wRfBsWWplRAI7yFiA8voYWkk0Y4GIXAQHpSWnl4hIFJer6bC4RXH4_WU&h=AT2d2Fc_XP7UkP5lTFiDTFRGz21onsxE5ZhHOBGVkYraZciENKc0AbZmKb7KCZaL0kAHHESP5_ga-hQbIYcg4u8BxQs_DH6mQ5zQPaJ7tUtgg2lauyIl-SOvJqCJfKzs4icKMQ)
+   1. [ENG.Keroles Shenouda slides](https://l.facebook.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Fdrive%2Fmobile%2Ffolders%2F1rHnM5Q70x2f1bcMJORJjZJ_GvnDiNfo_%3Ffbclid%3DIwAR0wRfBsWWplRAI7yFiA8voYWkk0Y4GIXAQHpSWnl4hIFJer6bC4RXH4_WU&h=AT2d2Fc_XP7UkP5lTFiDTFRGz21onsxE5ZhHOBGVkYraZciENKc0AbZmKb7KCZaL0kAHHESP5_ga-hQbIYcg4u8BxQs_DH6mQ5zQPaJ7tUtgg2lauyIl-SOvJqCJfKzs4icKMQ)
    2. [Bootlin](https://riscv.org/news/2020/12/embedded-linux-from-scratch-in-45-minutes-on-risc-v-bootlin/)
-   3. [ENG.Moatasem El Sayed](https://www.youtube.com/watch?v=8hP-oQ242B8&list=PLkH1REggdbJpFXAzQqpjZgV1oghPsf9OH&index=17)
+   3. [channel ENG.Moatasem El Sayed](https://www.youtube.com/watch?v=8hP-oQ242B8&list=PLkH1REggdbJpFXAzQqpjZgV1oghPsf9OH&index=17)
