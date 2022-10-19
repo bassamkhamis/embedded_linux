@@ -1,15 +1,15 @@
 # embedded_linux
 **Hello All, In this Repo I will demonstrate how can build embedded linux from scratch**
 ## content 
-1. Build compiler toolchain using Buildroot
-2. combile bootloader using U-boot
-3. compile openSBI firmware
-4. configare virtual SD card on linux Ubuntu 
-5. compile kernel 
-6. Build and compile root file system using busyBox
-7. Run linux on 
+- [Build compiler toolchain using Buildroot](#build-compiler-toolchain-using-Buildroot)
+- [Combile bootloader using U-boot](#combile bootloader using U-boot)
+- [Compile openSBI firmware](#compile openSBI firmware)
+- [Configare virtual SD card on linux Ubuntu](#configare virtual SD card on linux Ubuntu)
+- [Compile kernel](#compile kernel) 
+- [Build and compile root file system using busyBox](#build and compile root file system using busyBox)
+- [Run linux on qemu](#Run linux on qemu) 
 
-## Buildroot
+## Build compiler toolchain using Buildroot
 **is open source and Can build a toolchain, a rootfs, a kernel, a bootloader in small time
 and easy to configure using menuconfig or xconfig**
 
@@ -43,4 +43,24 @@ sudo apt-get install bison
 **Done we have our new toolchain
 NOTE: Don't forget add toolchain in path by** `export PATH=~/path of file/:$PATH`
 
+# combile bootloader using U-boot
 
+
+
+# compile openSBI firmware
+
+
+
+# configare virtual SD card on linux Ubuntu 
+
+
+
+# compile kernel 
+
+
+
+# Build and compile root file system using busyBox
+
+
+
+# Run linux 
