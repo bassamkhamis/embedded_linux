@@ -43,7 +43,7 @@ sudo apt-get install bison
 **Done we have our new toolchain
 NOTE: Don't forget add toolchain in path by** `export PATH=~/path of file/:$PATH`
 
-# Combile bootloader using U-boot
+## Combile bootloader using U-boot
 **TODO**
 
 
