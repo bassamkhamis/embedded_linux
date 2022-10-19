@@ -16,24 +16,18 @@ and easy to configure using menuconfig or xconfig**
 **First download** [Buildroot](https://buildroot.org/)
 Then Extract it and inside it Run 
 
-''''
-'''
-
+```
 make menuconfig
+```
 
-'''
- ''''
- 
- 'int x =9;'
+
 **may need to install some utilities like bison and flex**
 
-''''
-'''
+```
 sudo apt-get update
 sudo apt-get install flex
 sudo apt-get install bison
-'''
-''''
+```
 
 **window like this will be appeared** 
 
@@ -46,6 +40,6 @@ sudo apt-get install bison
    1. Kernel Headers > Linux 5.17.x kernel headers
    2. GCC compiler Version > gcc 11.x
 
-**Finaly Run "make -j6" it will take long time**
+**Finaly Run `make -j6` it will take long time**
 
 
