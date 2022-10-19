@@ -19,6 +19,8 @@ Then Extract it and inside it Run
 ''''
 '''make menuconfig'''
  ''''
+ 
+ 'int x =9;'
 **may need to install some utilities like bison and flex**
 
 ''''
