@@ -134,7 +134,7 @@ $ make defconfig
    
    ```
    **You must see this**
-    ![](https://github.com/bassamkhamis/embedded_linux/blob/main/linux tree.png)   
+    ![](https://github.com/bassamkhamis/embedded_linux/blob/main/linux%20tree.png)   
    
    
    
