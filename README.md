@@ -68,7 +68,7 @@ ls configs/ | grep riscv
 **This lines means fist one save varibles envirument in FAT, second one <virtio> name of SD card, <0:1> first device partin one**
 **for adtinal configruation we can open menual and add some customer configruation by run this** `make menuconfig` **in folder of u-boot
    this will appear 
-   ![]()
+   ![](https://github.com/bassamkhamis/embedded_linux/blob/main/u-boot.png)
    
    finaly, run this
    
@@ -79,10 +79,8 @@ ls configs/ | grep riscv
    ```
    **NOTE:
            1. CROSS_COMBILE=riscv64-linux- is store the prefix of your toolchain like riscv-linux-gcc
-           2. -j6 build faster x6, run 5 jobs
-   **
+           2. -j6 build faster x6, run 5 jobs**
    
-
 
 ## Compile openSBI firmware
 **TODO**
