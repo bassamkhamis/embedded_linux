@@ -83,14 +83,41 @@ ls configs/ | grep riscv
    
 
 ## Compile openSBI firmware
-**TODO**
-
-
+**Required to start an OS/u-boot from the Firmware(M mode) to Supervisor(S mode) and it work for RISCV Machine, OpenSBI has menuconfig like u-bbot and buildroot you can configuare and combile it**
+   
+```
+git clone https://github.com/riscv/opensbi.git
+cd opensbi
+git checkout v0.8
+make PLATFORM=generic FW_PAYLOAD_PATH=../u-boot-2021.01/u-boot.bin   
+```
+***
+   
+## Compile kernel  
+ **Download Linux sources from** `https://kernel.org` **Then we must set two environment variables for kernel**
+   
+```
+ export CROSS_COMPILE=riscv64-linux-
+ export ARCH=riscv  
+```
+**We can further customize the configuration, but for now will take default Linux kernel configuration for RISCV, we can find it by grep CLI**
+   
+   ```
+ $ make help | grep defconfig
+defconfig - New config with default from ARCH supplied defconfig
+savedefconfig - Save current config as ./defconfig (minimal config)
+alldefconfig - New config with all symbols set to default
+olddefconfig - Same as oldconfig but sets new symbols to their
+nommu_k210_defconfig - Build for nommu_k210
+nommu_virt_defconfig - Build for nommu_virt
+rv32_defconfig - Build for rv32
+$ make defconfig
+   ```
+  **Then combile kerenl by** `make -j 8` **it realy take long time, after combile you can find output in** `arch/riscv/boot/Image`   
+   
 ## Configare virtual SD card on linux Ubuntu 
-**TODO**
-
-
-## Compile kernel 
+**Create SD virsual** `dd if=/dev/zero of=disk.img bs=1M count=128` * size =128 M, all bytes are filled by zeros*
+ `cfdisk disk.img`  
 
 **TODO**
 
