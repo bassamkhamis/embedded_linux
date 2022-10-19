@@ -43,19 +43,19 @@ sudo apt-get install bison
 **Done we have our new toolchain
 NOTE: Don't forget add toolchain in path by** `export PATH=~/path of file/:$PATH`
 
-# combile bootloader using U-boot
+# Combile bootloader using U-boot
 
 
 
-# compile openSBI firmware
+# Compile openSBI firmware
 
 
 
-# configare virtual SD card on linux Ubuntu 
+# Configare virtual SD card on linux Ubuntu 
 
 
 
-# compile kernel 
+# Compile kernel 
 
 
 
@@ -63,4 +63,4 @@ NOTE: Don't forget add toolchain in path by** `export PATH=~/path of file/:$PATH
 
 
 
-# Run linux 
+# Run linux on qemu
