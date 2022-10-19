@@ -4,9 +4,9 @@
 - [Build compiler toolchain using Buildroot](#build-compiler-toolchain-using-Buildroot)
 - [Combile bootloader using U-boot](#combile-bootloader-using-U-boot)
 - [Compile openSBI firmware](#compile-openSBI-firmware)
-- [Configare virtual SD card on linux Ubuntu](#configare-virtual-SD-card-on-linux-Ubuntu)
-- [Compile kernel](#compile-kernel) 
+- [Configure virtual SD card on linux Ubuntu](#configare-virtual-SD-card-on-linux-Ubuntu)
 - [Build and compile root file system using busyBox](#build-and-compile-root-file-system-using-busyBox)
+- [Compile kernel](#compile-kernel) 
 - [Run linux on qemu](#Run-linux-on-qemu) 
 
 ## Build compiler toolchain using Buildroot
@@ -65,7 +65,7 @@ ls configs/ | grep riscv
  CONFIG_ENV_FAT_DEVICE_AND_PART="0:1"
 ```
 
-**This lines means fist one save varibles envirument in FAT, second one <virtio> name of SD card, <0:1> first device partin one**
+**This lines means fist one save varibles envirument in FAT, second one <virtio> name of SD card, <0:1> first device partition one**
 **for adtinal configruation we can open menual and add some customer configruation by run this** `make menuconfig` **in folder of u-boot
    this will appear 
    ![](https://github.com/bassamkhamis/embedded_linux/blob/main/u-boot.png)
@@ -115,14 +115,72 @@ $ make defconfig
    ```
   **Then combile kerenl by** `make -j 8` **it realy take long time, after combile you can find output in** `arch/riscv/boot/Image`   
    
-## Configare virtual SD card on linux Ubuntu 
-**Create SD virsual** `dd if=/dev/zero of=disk.img bs=1M count=128` * size =128 M, all bytes are filled by zeros*
- `cfdisk disk.img`  
-
-**TODO**
-
+   
 ## Build and compile root file system using busyBox
+**BusyBox is a software suite that provides several Unix utilities in a single executable**
+**Download 1.33 version** `https://busybox.net` **then unzip it and run** ` make allnoconfig` **to reset, the configure is easy run** `make menuconfig` ** and select utilities that you want it to be in filesystem like**
+   
+1. In Settings →Build Options, enable Build static binary (no shared libs)
+2. In Settings →Build Options, set Cross compiler prefix to riscv64-linux-
+3. Then enable support for the following commands:
+   
+`ash, init, halt, mount, cat, mkdir, echo, ls, chmod,vi, ifconfig, rm`
+   
+ **Then run** 
+   ```
+   make -j 8
+   make install
+   _install
+   
+   ```
+   **You must see this**
+    ![](https://github.com/bassamkhamis/embedded_linux/blob/main/linux tree.png)   
+   
+   
+   
+   
+   
+## Configure virtual SD card on linux Ubuntu 
+**Create SD virsual** `dd if=/dev/zero of=disk.img bs=1M count=128` * size =128 M, all bytes are filled by zeros
+run this `cfdisk disk.img`  then selsect Dos and create two partins as follows:**
+   
+   1. A first 64 MB primary partition (type W95 FAT32 (LBA)), marked as bootable
+   2. A second partition with remaining space (default type: Linux)
+![](https://github.com/bassamkhamis/embedded_linux/blob/main/SD_format.png)
+   
+   **Now we can access this partitions in this disk image:**
+   
+   ```
+   sudo losetup -f --show --partscan disk.img
+    /dev/loop13
+
+   ```
+   **In my case loop13, may be different in your case, We can now format the partitions:**
+   ```
+   sudo mkfs.vfat -F 32 -n boot /dev/loop13p1
+   sudo mkfs.ext4 -L rootfs /dev/loop13p2
+
+   ```
+   ** Create mount point and copy kernel and file system**
+   
+   ```
+   mkdir /mnt/boot
+   sudo mount /dev/loop2p1 /mnt/boot
+   sudo cp linux-5.11-rc3/arch/riscv/boot/Image /mnt/boot
+   sudo umount /mnt/boot
+   ```
+   **copy rootfile system**
+   ```
+   sudo mkdir /mnt/rootfs
+   sudo mount /dev/loop2p2 /mnt/rootfs
+   sudo rsync -aH _install/ /mnt/rootfs/
+   sudo umount /mnt/rootfs
+   
+   ```
+
 **TODO**
+
+
 
 
 ## Run linux on qemu
